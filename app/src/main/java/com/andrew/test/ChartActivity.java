@@ -6,22 +6,29 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
 public class ChartActivity extends AppCompatActivity {
-    BarChart barChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chart);
-/*
+
         BarDataSet barSet = createBarDataSet();
+
         ArrayList<String> labels = createXAxisLabels();
-        barChart = (BarChart) findViewById(R.id.barChart);*/
+        BarChart barChart = new BarChart(this);
+        setContentView(barChart);
+
+        BarData data = new BarData(labels, barSet);
+        barChart.setData(data);
+        barChart.setDescription("# of times police injured civilians");
+        barChart.animateXY(5000, 5000);
     }
 
     public BarDataSet createBarDataSet(){
@@ -33,7 +40,7 @@ public class ChartActivity extends AppCompatActivity {
         entries.add(new BarEntry(18f, 4));
         entries.add(new BarEntry(9f, 5));
 
-        return new BarDataSet(entries, "# of Phone Calls");
+        return new BarDataSet(entries, "# of police brutality events");
     }
 
     public ArrayList<String> createXAxisLabels(){
