@@ -20,33 +20,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //floating_menu = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
+    }
 
-        findViewById(R.id.data).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DataActivity.class);
-                startActivity(intent);
-                //floating_menu.toggle();
-            }
-        });
+    public void openDataActivity(View view) {
+        Intent intent = new Intent(this, DataActivity.class);
+        startActivity(intent);
+    }
 
-        findViewById(R.id.chart).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ChartActivity.class);
-                startActivity(intent);
-                //floating_menu.toggle();
-            }
-        });
+    public void openChartActivity(View view) {
+        Intent intent = new Intent(this, ChartActivity.class);
+        startActivity(intent);
+    }
 
-        findViewById(R.id.summary).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SummaryActivity.class);
-                startActivity(intent);
-                //floating_menu.toggle();
-            }
-        });
-
+    public void openSummaryActivity(View view){
+        Intent intent = new Intent(this, SummaryActivity.class);
+        startActivity(intent);
     }
 }
