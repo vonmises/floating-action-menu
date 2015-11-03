@@ -20,6 +20,30 @@
             android:name=".share"
             android:label="@string/title_activity_share" >
         </activity>
+        <activity
+            android:name=".DataActivity"
+            android:label="@string/title_activity_data"
+            android:parentActivityName="com.getbase.floatingactionbutton.sample.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.getbase.floatingactionbutton.sample.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ChartActivity"
+            android:label="@string/title_activity_chart"
+            android:parentActivityName="com.getbase.floatingactionbutton.sample.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.getbase.floatingactionbutton.sample.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SummaryActivity"
+            android:label="@string/title_activity_summary"
+            android:parentActivityName="com.getbase.floatingactionbutton.sample.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.getbase.floatingactionbutton.sample.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
